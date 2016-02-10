@@ -14,6 +14,7 @@ public class TestGame {
 		boolean condition = false;
 		System.out.println("Quanti soldi vuoi giocare?");
 		int money = sc.nextInt();
+		sc.close();
 		player.setCash(money);
 		
 		do {
@@ -21,8 +22,10 @@ public class TestGame {
 			while( player.getCash() > 0 ){
 				System.out.println("Inserisci la cifra che vuoi puntare:");
 				bet = sc.nextInt();
+				sc.close();
 				player.setBet(bet);
 				System.out.println("Inserisci il numero che vuoi indovinare");
+				sc.close();
 				int numberChoose = sc.nextInt();
 				
 				System.out.println("******************");
@@ -43,6 +46,7 @@ public class TestGame {
 				System.out.println("**************************");
 				System.out.println("Vuoi continuare a giocare?");
 				String continueGame = sc.next();
+				sc.close();
 				if (continueGame.equalsIgnoreCase("no")) {
 					condition = true;
 					break;
